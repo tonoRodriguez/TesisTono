@@ -1,4 +1,4 @@
-cdimport Graphviz from 'graphviz-react';
+import Graphviz from 'graphviz-react';
 import React, { useState } from "react";
 
 const InputText = () => {
