@@ -1,0 +1,16 @@
+
+.screen{
+  display: flex;
+  
+}
+.subscreenRight{
+  flex: 50%;
+  border-style: double;
+}
+.subscreenLeft{
+  flex: 50%;
+  border-style: double;
+}
+h1{
+  text-align: center;
+}
