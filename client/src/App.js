@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 import InputText from "./components/InputText";
+import OutputText from "./components/OutputText";
 const App = ()=> {
 
+  const [texto,setTexto] = useState();
 
   return (
 
@@ -15,6 +17,8 @@ const App = ()=> {
       <div className="subscreenLeft">
         <h1>Nodo Optimizado</h1>
         <h2>Boton de optimizar</h2>
+        <OutputText/>
+
       </div>
     </div>
   );
