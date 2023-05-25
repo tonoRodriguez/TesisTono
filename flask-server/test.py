@@ -25,18 +25,11 @@ separation for mealy and moore
 """
 
 #Create the nodes list for Mealy and Moore machines
-def obtainNodosMealy(json_object):
+def obtainNodos(json_object):
     nodos = []
     for key in json_object:
         x=json_object[key].split("],[")
-        nodos=nodos + [State(x[0][1],[x[1],x[2]],x[0][3:5],x[0][6:8])]
-    return nodos
-
-def obtainNodosMoore(json_object):
-    nodos = []
-    for key in json_object:
-        x=json_object[key].split("],[")
-        nodos=nodos + [State(x[0][1] + x[0][9:11],[x[1],x[2]],x[0][3:5],x[0][6:9])]
+        nodos=nodos + [State(x[0][1],x[1:],x[0][3])]
     return nodos
 
 """

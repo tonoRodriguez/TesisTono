@@ -6,10 +6,9 @@ Created on Fri Feb 17 06:13:50 2023
 """
 
 class State:
-  def __init__(self, Actual,NextState, InVal, Outputs): 
+  def __init__(self, Actual,NextState, Outputs): 
     self.Actual=Actual
     self.NextState= NextState
-    self.InVal = InVal
     self.Outputs= Outputs
     self.grupo=""
     self.Iguales=["321"]
