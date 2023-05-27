@@ -19,7 +19,7 @@ const OptGraf = (todos) => {
     const CreateGraph = (event) => {
         event.preventDefault();
         console.log("here i create the graph")
-        const response = fetch('http://localhost:5000/data')
+        const response = fetch('http://localhost:5000/GetData')
             .then(res => res.json())
             .then(data => console.log(data))
     }
@@ -30,7 +30,7 @@ const OptGraf = (todos) => {
                 <button className="button-add" type="submit">Optimizar</button>
             </form>
             <form onSubmit = {CreateGraph}>
-            <button className="button-add" type="submit">See new graph</button>
+                <button className="button-add" type="submit">See new graph</button>
             </form>
         </div>
     )

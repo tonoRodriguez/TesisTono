@@ -23,13 +23,19 @@ def insert_data():
   global dat 
   if request.method == 'POST':
     data = json.loads(request.get_json())
+    
     #data=json.dumps(data)
     #print(data)
     #data_str = data.replace('\r', '').replace('\n','')
     #data_str = data_str.strip().replace('\r', '').replace('\n', '')
     #data_str = data_str.replace(' : ', ':')
     q=ts.obtainNodos(data)
-    print(q[1].NextState)
+    ts.SeparateGroupes(q)
+    ts.DefineEqualNode(q)
+    a,b=ts.createNewMachine(q)
+    l=ts.specifyNodes(q,a)
+    dat={l[0].Actual : str(l[0].NextState)}
+    print(l[0].Actual)
   
     #
   # Do something with the data, such as inserting it into a database
