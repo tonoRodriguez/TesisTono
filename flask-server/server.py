@@ -1,5 +1,5 @@
 from flask import Flask, request
-import test as ts
+import FinalData as ts
 import json
 from flask_cors import CORS
 from flask import jsonify
@@ -33,9 +33,9 @@ def insert_data():
     ts.SeparateGroupes(q)
     ts.DefineEqualNode(q)
     a,b=ts.createNewMachine(q)
-    l=ts.specifyNodes(q,a)
-    dat={l[0].Actual : str(l[0].NextState)}
-    print(l[0].Actual)
+    l=ts.SpNodes(q,a)
+   # dat={l: str(l)}
+    print(l)
   
     #
   # Do something with the data, such as inserting it into a database
