@@ -1,11 +1,11 @@
 import { useState } from "react";
+import Graphviz from 'graphviz-react';
 
 const OutputText = ({texto}) => {
 
-    const [grafoOpt,setGrafoOpt] = useState(["hola","hola"]);
+    const [grafoOpt,setGrafoOpt] = useState("");
     const sendGraph = (event)=>{
         event.preventDefault();
-        setGrafoOpt(texto);
         const response = fetch('http://localhost:5000/data', {
             method: 'POST',
             headers: {
@@ -13,10 +13,28 @@ const OutputText = ({texto}) => {
             },
             body: JSON.stringify(texto, null, 2),
           });
-          console.log("here i create the graph")
           const response2 = fetch('http://localhost:5000/GetData')
               .then(res => res.json())
-              .then(data => console.log(data))
+              .then(data =>{
+                var dot = "digraph {\n"
+                for (let node in data){
+                    const conexiones = data[node]
+                    for (let NSnumber in conexiones){
+                        dot += "\t" + node + "->" + conexiones[NSnumber][0] +";\n"
+                    
+                    }
+
+                }
+                dot += "}"
+                console.log(dot)
+                setGrafoOpt(dot)
+
+                
+
+
+
+              })
+          
           
     };
 
@@ -25,7 +43,7 @@ const OutputText = ({texto}) => {
             <form onSubmit={sendGraph}>
                 <button className="button-4"  type="submit">Optimizar</button>
             </form>
-            <h1>{grafoOpt}</h1>
+            <Graphviz dot={grafoOpt} options={{ width: 200, height: 200 }} />
         </div>
     )
 };

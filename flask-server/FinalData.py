@@ -77,7 +77,6 @@ def createNewMachine(nodes):
         iguales = set(node.Iguales)
         lol = ""
         if node.Actual[0] in encontrados:
-            print(buscarHomologo(node.Actual, newNodes))
             node.newNode = buscarHomologo(node.Actual, newNodes)
         else:
             for j in iguales:
@@ -85,7 +84,7 @@ def createNewMachine(nodes):
                     lol = lol + j[0]
                     encontrados= encontrados + [j[0]]
                 elif j[2]=="F":
-                    print("weno")
+                    continue
             newNodes = newNodes + [node.Actual + lol]
             node.newNode = node.Actual[0] + lol
     return newNodes,encontrados
@@ -110,7 +109,6 @@ def getnodMoore(name,lista):
 def DefineEqualNode(nodos):
     for i in range(len(nodos)-1):
         for j in range(1 + i,len(nodos)):
-            print(i,j)
             CompararNodos(nodos[i],nodos[j],nodos)
     return
 

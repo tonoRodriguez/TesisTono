@@ -14,7 +14,6 @@ def index():
 @app.route('/GetData',methods=['GET'])
 def get_data():
   global dat
-  data = {'foo': 'bar', 'baz': 123}
   return jsonify(dat)
 
 @app.route('/data', methods=['POST'])
@@ -34,22 +33,14 @@ def insert_data():
     ts.DefineEqualNode(q)
     a,b=ts.createNewMachine(q)
     l=ts.SpNodes(q,a)
+    sets = {}
+    for i in l:
+      sets[i[0]] =  i[1]
    # dat={l: str(l)}
-    print(l)
+    dat = sets
   
     #
   # Do something with the data, such as inserting it into a database
-
-  # ...
-   # print(data[0].split("],["))
-
-   #
-    #print(q[0].Actual)
-    #ts.SeparateGroupesMealy(q)
-    #ts.DefineEqualNodesMealy(q)
-    #a,b= ts.createNewMachine(q)
-    #l=ts.specifyNodes(q,a)
-
     #q= ts.obtainNodosMoore(newData)
     #ts.SeparateGroupesMoore(q)
     #ts.DefineEqualNodesMoore(q)
