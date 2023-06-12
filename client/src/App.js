@@ -1,31 +1,36 @@
 import { useState } from "react";
+import { BrowserRouter,Link, Route, Routes} from "react-router-dom"
 import "./App.css";
 import InputText from "./components/InputText";
 import OutputText from "./components/OutputText";
+import FileCode from "./components/FileCode";
+import TodoList from "./components/Todo";
+import ManualInput from "./components/ManualInput";
 const App = ()=> {
 
-  const [texto,setTexto] = useState([]);
 
   return (
+    <>
+    <nav>
+      <ul>
+        <li>
+          <Link to ="/">Home</Link>
+        </li>
+        <li>
+          <Link to ="/fcode">F code</Link>
+        </li>
+      </ul>
+    </nav>
+    <Routes>
+      <Route path="/" element = {<ManualInput/>} />
+      <Route path="/fcode" element = {<FileCode/>} />
+    </Routes>
 
-    <div className="screen">
-      <div className="subscreenRight">
-        <h1>Insertar Nodo</h1>
-        <InputText 
-        setTexto = {setTexto}
-        texto = {texto}
-        />
+    </>
 
-      </div>
-      <div className="subscreenLeft">
-        <h1>Nodo Optimizado</h1>
-        <h2>Boton de optimizar</h2>
-        <OutputText texto = {texto}/>
-
-      </div>
-    </div>
   );
 }
 export default App;
 
 
+ 
