@@ -1,10 +1,9 @@
-import { useState } from "react";
+
 import { BrowserRouter,Link, Route, Routes} from "react-router-dom"
 import "./App.css";
-import InputText from "./components/InputText";
-import OutputText from "./components/OutputText";
 import FileCode from "./components/FileCode";
-import TodoList from "./components/Todo";
+import Home from "./components/Home";
+
 import ManualInput from "./components/ManualInput";
 const App = ()=> {
 
@@ -17,12 +16,15 @@ const App = ()=> {
           <Link to ="/">Home</Link>
         </li>
         <li>
-          <Link to ="/fcode">F code</Link>
+          <Link to ="/fcode">Examples</Link>
+        </li>
+        <li>
+          <Link to ="/fcode">Optimizer</Link>
         </li>
       </ul>
     </nav>
     <Routes>
-      <Route path="/" element = {<ManualInput/>} />
+      <Route path="/" element = {<Home/>} />
       <Route path="/fcode" element = {<FileCode/>} />
     </Routes>
 
