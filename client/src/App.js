@@ -15,7 +15,7 @@ const App = ()=> {
           <Link to ="/">Home</Link>
         </li>
         <li>
-          <Link to ="/examples">Code Compiler</Link>
+          <Link to ="/examples">About</Link>
         </li>
         <li>
           <Link to ="/fcode">Optimizer</Link>

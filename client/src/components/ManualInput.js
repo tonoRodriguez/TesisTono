@@ -1,12 +1,10 @@
+import EnterNode from "./EnterNode";
 const ManualInput = ()=> {
 
-  
     return (
-  
-      <div >
-        <h1>HOLA DJSIKD</h1>
-        <h2>pq no sales???</h2>
-      </div>
+        <div>
+          <EnterNode/>
+        </div>
     );
   }
   export default ManualInput;
