@@ -1,10 +1,9 @@
 
 import { BrowserRouter,Link, Route, Routes} from "react-router-dom"
 import "./App.css";
-import FileCode from "./components/FileCode";
 import Home from "./components/Home";
-
-import ManualInput from "./components/ManualInput";
+import Examples from "./components/Examlpe";
+import Optimizer from "./components/Optimizer";
 const App = ()=> {
 
 
@@ -16,7 +15,7 @@ const App = ()=> {
           <Link to ="/">Home</Link>
         </li>
         <li>
-          <Link to ="/fcode">Examples</Link>
+          <Link to ="/examples">Code Compiler</Link>
         </li>
         <li>
           <Link to ="/fcode">Optimizer</Link>
@@ -25,7 +24,8 @@ const App = ()=> {
     </nav>
     <Routes>
       <Route path="/" element = {<Home/>} />
-      <Route path="/fcode" element = {<FileCode/>} />
+      <Route path="/fcode" element = {<Optimizer/>} />
+      <Route path="/examples" element = {<Examples/>} />
     </Routes>
 
     </>
