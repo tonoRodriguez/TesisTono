@@ -1,5 +1,5 @@
 nav {
-  background-color: #333; /* El color de fondo de la barra de navegación */
+  background-color: #333333; /* El color de fondo de la barra de navegación */
   height: 60px; /* La altura de la barra de navegación */
   display: flex; /* Usamos flexbox para alinear los elementos en la barra de navegación */
   justify-content: flex-start; /* Alinea los elementos al comienzo de la barra de navegación */
@@ -19,7 +19,9 @@ li {
 }
 
 li a {
-  color: #fff; /* El color de los enlaces */
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
   text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 

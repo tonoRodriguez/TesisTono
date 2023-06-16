@@ -1,19 +1,20 @@
 import "./Home.css";
-import Graphviz from 'graphviz-react';
 const Home = () => {
-    const dot = `
-    digraph simple_graph {
-      A -> B;
-      B -> C;
-    }
-  `;
     return (
-      <div className="hero">
-        <h1 className="hero-title">DESARROLLO DE TECNICAS DE OPTIMIZACION DE MAQUINAS DE ESTADO FINITO (FSM) PARA SU IMPLEMENTACION BASADA EN UN FPGA</h1>
-        <h2 className="hero-subtitle">Memoria de titulo</h2>
-        <div className="graph">
-            <Graphviz dot={dot} />
+      <div>
+        <div className="hero">
+          <p className="hero-title">Optimizaor de maquinas de estados finito (fsm)</p>
+          <div className="hero-subcontainer">
+            <h2 className="hero-subtitle">Memoria para optar al titulo de ingeniero civil electrico</h2>
+            <h2 className="hero-subtitle">Antonio Rodríguez</h2>
+            <h2 className="hero-subtitle">Universidad de Chile</h2>
+
+          </div>
         </div>
+        <div className="subcontaier">
+
+        </div>
+
       </div>
     );
 }

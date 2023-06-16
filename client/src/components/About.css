@@ -1,5 +1,5 @@
-.hero {
-    background-image: url('graph1.png');
+.about {
+    background-image: url('graph2.png');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -37,8 +37,8 @@
   }
   
 
-  .subcontaier{
-    background-color: #76CF94;
+  .subcontainerAbout{
+    background-color: #B8E2C6;
     width: 2166px;
     height: 1080px;
   }
