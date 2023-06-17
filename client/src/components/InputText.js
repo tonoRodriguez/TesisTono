@@ -45,7 +45,6 @@ const InputText = ({texto,setTexto}) => {
         <form>
           <input type="file" onChange={handleFileInput} />
         </form>
-        <h1 > inserta g </h1>
       </div>
     );
 

@@ -12,24 +12,21 @@
   }
   
   .hero-title {
-    margin-top: -10vh;
     text-align: left;
-    font: normal normal 560 100px/120px Lato;
     letter-spacing: 0px;
     color: #FFFFFF;
     margin-left: 10%;
     margin-right: 5%;
     width: 80%;
     height: 10%;
+    font-size: 5em;
   }
   
   .hero-subtitle {
     color: #FFFFFF;
-    font-family: Arial, sans-serif;
     font-size: 1.5em;
   }
   .hero-subcontainer{
-    margin-top: -10vh;
     text-align: left;
     width: 80%;
     margin-left: 10%;
@@ -39,6 +36,19 @@
 
   .subcontaier{
     background-color: #76CF94;
-    width: 2166px;
-    height: 1080px;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .TituloOpt{
+    top: 50%;
+    left: 50%;
+  }
+  .tituloOptTx{
+    text-align: center;
+  }
+  .OptButton{
+    border-radius: 10%;
+    top: 50%;
+    left: 50%;
   }

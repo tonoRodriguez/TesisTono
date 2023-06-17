@@ -3,7 +3,7 @@ const Home = () => {
     return (
       <div>
         <div className="hero">
-          <p className="hero-title">Optimizaor de maquinas de estados finito (fsm)</p>
+          <h1 className="hero-title">Optimizaor de maquinas de estados finito (fsm)</h1>
           <div className="hero-subcontainer">
             <h2 className="hero-subtitle">Memoria para optar al titulo de ingeniero civil electrico</h2>
             <h2 className="hero-subtitle">Antonio Rodríguez</h2>
@@ -12,7 +12,10 @@ const Home = () => {
           </div>
         </div>
         <div className="subcontaier">
-
+          <div className="TituloOpt">
+            <h1 className="tituloOptTx" >Descubre el algoritmo</h1>
+          </div>
+          <button className="OptButton">Optimizaor</button>
         </div>
 
       </div>

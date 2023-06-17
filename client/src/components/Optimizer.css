@@ -1,6 +1,17 @@
 .Layout{
   background-color: #333333;
   background-size: cover;
-  width: 2166px;
-  height: 1080px;
+  width: 100vw;
+  height: 100vh;
+}
+.buttonFF{
+  margin: 10px;
+  padding-left: 10vh;
+  padding-right: 10vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-radius: 15px;
+  border: 2px solid #FFFFFF;
+  background-color: #333333;
+  color: #FFFFFF;;
 }

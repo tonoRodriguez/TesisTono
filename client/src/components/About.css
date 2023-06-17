@@ -2,7 +2,7 @@
     background-image: url('graph2.png');
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    height: 100vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,6 @@
   .hero-title {
     margin-top: -10vh;
     text-align: left;
-    font: normal normal 560 100px/120px Lato;
     letter-spacing: 0px;
     color: #FFFFFF;
     margin-left: 10%;
@@ -39,6 +38,19 @@
 
   .subcontainerAbout{
     background-color: #B8E2C6;
-    width: 2166px;
-    height: 1080px;
+    width: 100vw;
+    height: 100vh;
+  }
+  .subcontainerAbout h1{
+    text-align: left;
+  }
+  .subC{
+    display: flex;
+    flex-direction: row;
+  }
+  .Cuadrados{
+    width: 10vw;
+    height:10vh;
+    margin: 3%;
+    background-color: black;
   }
