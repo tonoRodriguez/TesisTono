@@ -3,11 +3,11 @@ const Home = () => {
     return (
       <div>
         <div className="hero">
-          <h1 className="hero-title">Optimizaor de maquinas de estados finito (fsm)</h1>
+          <h1 className="hero-titleHome">Optimizaor de maquinas de estados finito (fsm)</h1>
           <div className="hero-subcontainer">
-            <h2 className="hero-subtitle">Memoria para optar al titulo de ingeniero civil electrico</h2>
-            <h2 className="hero-subtitle">Antonio Rodríguez</h2>
-            <h2 className="hero-subtitle">Universidad de Chile</h2>
+            <h2 className="hero-subtitleHome">Memoria para optar al titulo de ingeniero civil electrico</h2>
+            <h2 className="hero-subtitleHome">Antonio Rodríguez</h2>
+            <h2 className="hero-subtitleHome">Universidad de Chile</h2>
 
           </div>
         </div>

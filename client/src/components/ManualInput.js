@@ -2,8 +2,14 @@ import EnterNode from "./EnterNode";
 const ManualInput = ()=> {
 
     return (
-        <div>
+      <div className="screen">
+        <div className="subscreenLeft">
           <EnterNode/>
+        </div>
+        <div className="subscreenRight">
+
+        </div>
+
         </div>
     );
   }

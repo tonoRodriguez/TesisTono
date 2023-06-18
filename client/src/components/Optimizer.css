@@ -4,6 +4,9 @@
   width: 100vw;
   height: 100vh;
 }
+.BOpt{
+  margin-left: 5vw;
+}
 .buttonFF{
   margin: 10px;
   padding-left: 10vh;
@@ -14,4 +17,5 @@
   border: 2px solid #FFFFFF;
   background-color: #333333;
   color: #FFFFFF;;
+  margin-top: 5vh;
 }

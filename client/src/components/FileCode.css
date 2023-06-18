@@ -7,18 +7,18 @@
     flex: 50%;
     border-style: double;
     border-radius: 10px;
-    margin-left: 5%;
+    margin-left: 2.5%;
     color: #FFFFFF;
-    height: 50vh;
+    height: 60vh;
     margin-right: 1.5vw;
   }
   .subscreenLeft{
     flex: 50%;
     border-style: double;
-    margin-right: 5%;
+    margin-right: 2.5%;
     border-radius: 10px;
     color: #FFFFFF;
-    height: 50vh;
+    height: 60vh;
     margin-left: 1.5vw;
   }
   h1{

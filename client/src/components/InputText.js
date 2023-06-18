@@ -16,25 +16,23 @@ const InputText = ({texto,setTexto}) => {
     const file = e.target.files[0];
     const reader = new FileReader();
     reader.onload = async () => {
-      const obj = {};
-      reader.result.split("\n").forEach((line) => {
-        const [key, value] = line.split(":");
-        if (value) {
-          obj[key.trim()] = value.trim();
+
+      setTexto(reader.result)
+      // desde acá tengo que modificar
+      const grafo = JSON.parse(reader.result)[0]
+      var dot2 = "digraph {\n"
+      Object.keys(grafo).forEach(key => {
+        //dot2 = dot2 + json[key]
+        var nodo = grafo[key].split("],[");
+        var name = nodo[0].split(",")[0];
+        name= name.slice(1,name.lenght)
+        nodo = nodo.slice(1,nodo.length)
+        for (let i = 0; i < nodo.length; i++) {
+          dot2 = dot2 +"\n\t" +name+ "->" + nodo[i].split(",")[0]+";";
         }
 
       });
-      setTexto(reader.result)
-      var nodos=reader.result.split("\n")
-      nodos = nodos.slice(1,nodos.length -1) // entrga los valores del array desde el 1 hasta el large menos 1
-      var newNodos= nodos.map(str => str.split(":")[1])
-      newNodos = newNodos.slice(0,newNodos.length - 1);
-      newNodos = newNodos.map(str => str.split("],["));
-      newNodos = newNodos.map(arr => arr.map(str => str.replace(/\[|\]|'|"|\r/g, '').trim() ));
-      var dot = newNodos.map(array => array.slice(0,array.length + 1).reduce((accumulator, currentValue) => accumulator +"\n\t" +array[0][0]+ "->" + currentValue[0]+";"));
-      dot = dot.map(array => array.slice(4,array.length));
-      const dot2 = "digraph {\n"+ dot.join("\n") + "\n}";
-      setTextIn(dot2)
+      setTextIn(dot2+ "\n}")
     };
     reader.readAsText(file);
   };

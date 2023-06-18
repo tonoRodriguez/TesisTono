@@ -1,46 +1,65 @@
+import {v4 as uuidv4} from "uuid";
 import { useState } from "react";
+import Graphviz from "graphviz-react";
 
 const EnterNode = ()=> {
     const [name,setName] = useState("");
-    const [nextState1,setNextState1] = useState("");
-    const [nextState2,setNextState2] = useState("");
-    const [nextState3,setNextState3] = useState("");
+    const [nextState,setNextState] = useState("");
+    const [todos,setTodos] =useState([])
+    const [dot,setDot] = useState("digraph {")
+ 
 
     const onNameChange = (event)=>{
-        setNextState1(event.target.value)
+        setName(event.target.value)
     };
     const onNextState0Change = (event)=>{
-        setNextState1(event.target.value)
+        setNextState(event.target.value)
     };
-    const onNextState1Change = (event)=>{
-        setNextState1(event.target.value)
-    };
-    const onNextState2Change = (event)=>{
-        setNextState1(event.target.value)
+    const onNodeSubmit = (event) => {
+        event.preventDefault();
+        setTodos([...todos, {id: uuidv4(), Name: name ,NextState: nextState,completed:false}]);
+        var nodo = nextState.split("],[");
+        nodo[0]=nodo[0].slice(1,nodo[0].length)
+        var dot2 = ""
+        for (let i = 0; i < nodo.length; i++) {
+            dot2 = dot2 + "\n\t" +name[0]+ "->" + nodo[i].split(",")[0]+";";
+          }
+          setDot(dot + dot2)
+          console.log(dot)
     };
 
     return (
         <div>
-            <form >
+            <form onSubmit={onNodeSubmit}>
                 <input                     
                     type="text"
                     placeholder="[Name,Out]" 
+                    value ={name}
                     required
                     onChange={onNameChange}/>
                 <input
                     type="text"
-                    placeholder="[NextState,function]" 
+                    placeholder="[NextState,function]"
+                    value ={nextState} 
                     required
                     onChange={onNextState0Change}/>
+                <button className="button-add" type="submit"> Add Node</button>
+            </form>
+            <Graphviz dot={dot +"\n}"} options={{ width: 200, height: 200 }} />
+            <p>{dot}</p>
+
+            <form onSubmit={onNodeSubmit}>
+                <input                     
+                    type="text"
+                    placeholder="[Name]" 
+                    required
+                    onChange={onNameChange}/>
                 <input
                     type="text"
-                    placeholder="[NextState,function]"
-                    onChange={onNextState1Change}/>
-            <input
-                    type="text"
-                    placeholder="[NextState,function]"
-                    onChange={onNextState2Change}/>
-                <button className="button-add" type="submit"> Add </button>
+                    placeholder="[Miniterms]" 
+                    required
+                    onChange={onNextState0Change}/>
+                <button className="button-add" type="submit"> Add Function </button>
             </form>
         </div>
     );

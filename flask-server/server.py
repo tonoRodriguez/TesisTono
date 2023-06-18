@@ -23,12 +23,7 @@ def insert_data():
   if request.method == 'POST':
     data = json.loads(request.get_json())
     
-    #data=json.dumps(data)
-    #print(data)
-    #data_str = data.replace('\r', '').replace('\n','')
-    #data_str = data_str.strip().replace('\r', '').replace('\n', '')
-    #data_str = data_str.replace(' : ', ':')
-    q=ts.obtainNodos(data)
+    q=ts.obtainNodos(data[0])
     ts.SeparateGroupes(q)
     ts.DefineEqualNode(q)
     a,b=ts.createNewMachine(q)
@@ -38,6 +33,8 @@ def insert_data():
       sets[i[0]] =  i[1]
    # dat={l: str(l)}
     dat = sets
+
+    #Aca tengo que aplicar QM- metod
   
     #
   # Do something with the data, such as inserting it into a database

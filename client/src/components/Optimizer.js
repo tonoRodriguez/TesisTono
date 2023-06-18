@@ -8,9 +8,10 @@ function MainComponent() {
 
   return (
     <div className='Layout'>
-      <button className='buttonFF' onClick={() => setShowComponent('form')}>Form</button>
-      <button className='buttonFF' onClick={() => setShowComponent('file')}>File</button>
-
+      <div className='BOpt'>
+        <button className='buttonFF' onClick={() => setShowComponent('form')}>Form</button>
+        <button className='buttonFF' onClick={() => setShowComponent('file')}>File</button>
+      </div>
       {showComponent === 'form' && <ManualInput />}
       {showComponent === 'file' && <FileCode />}
     </div>
