@@ -5,6 +5,8 @@ import Graphviz from "graphviz-react";
 const EnterNode = ()=> {
     const [name,setName] = useState("");
     const [nextState,setNextState] = useState("");
+    const [fname,setFName] = useState("");
+    const [miniterms,setMiniterms] = useState("");
     const [todos,setTodos] =useState([])
     const [dot,setDot] = useState("digraph {")
  
@@ -27,7 +29,25 @@ const EnterNode = ()=> {
           setDot(dot + dot2)
           console.log(dot)
     };
+    const onMinitermsChange = (event)=>{
+        setMiniterms(event.target.value)
+    };
+    const onFNameChange = (event)=>{
+        setFName(event.target.value)
+    };
+    const onFunctionSubmit = (event) => {
+        event.preventDefault();
+        setTodos([...todos, {id: uuidv4(), Name: fname ,Miniterms: miniterms,completed:false}]);
 
+
+    };
+    /*
+    content = Object.entries(todos).map(([key, value]) => (
+        <li key={key}>
+          {key}: {value},{' '}
+        </li>
+      ));
+      */
     return (
         <div>
             <form onSubmit={onNodeSubmit}>
@@ -48,18 +68,21 @@ const EnterNode = ()=> {
             <Graphviz dot={dot +"\n}"} options={{ width: 200, height: 200 }} />
             <p>{dot}</p>
 
-            <form onSubmit={onNodeSubmit}>
+            <form onSubmit={onFunctionSubmit}>
                 <input                     
                     type="text"
-                    placeholder="[Name]" 
+                    placeholder="[FName]"
+                    value={fname}
                     required
-                    onChange={onNameChange}/>
+                    onChange={onFNameChange}/>
                 <input
                     type="text"
                     placeholder="[Miniterms]" 
+                    value = {miniterms}
                     required
-                    onChange={onNextState0Change}/>
+                    onChange={onMinitermsChange}/>
                 <button className="button-add" type="submit"> Add Function </button>
+                <p>{JSON.stringify(todos)}</p>
             </form>
         </div>
     );
