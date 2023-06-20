@@ -2,6 +2,7 @@ from flask import Flask, request
 import FinalData as ts
 import json
 from flask_cors import CORS
+import QMC as qm
 from flask import jsonify
 
 app = Flask(__name__)
@@ -22,7 +23,12 @@ def insert_data():
   global dat 
   if request.method == 'POST':
     data = json.loads(request.get_json())
-    
+    func={}
+    for keys in data[1]:
+      f = qm.QuineMcCluskey(data[1][keys],[]).split(" = ")
+      func[keys]=f[1]
+
+    print(func)
     q=ts.obtainNodos(data[0])
     ts.SeparateGroupes(q)
     ts.DefineEqualNode(q)
