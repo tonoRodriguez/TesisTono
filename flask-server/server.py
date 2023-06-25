@@ -28,7 +28,6 @@ def insert_data():
       f = qm.QuineMcCluskey(data[1][keys],[]).split(" = ")
       func[keys]=f[1]
 
-    print(func)
     q=ts.obtainNodos(data[0])
     ts.SeparateGroupes(q)
     ts.DefineEqualNode(q)
@@ -39,6 +38,7 @@ def insert_data():
       sets[i[0]] =  i[1]
    # dat={l: str(l)}
     dat = sets
+    dat = [sets,func]
 
     #Aca tengo que aplicar QM- metod
   
@@ -54,7 +54,6 @@ def insert_data():
     #print(dat)
     return jsonify({'fo': 'br', 'baz': 123})
   else :
-    print("entro a get")
     return "error"
 if __name__ == '__main__':
   app.run(debug=True)
