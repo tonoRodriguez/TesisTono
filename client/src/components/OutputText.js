@@ -21,13 +21,17 @@ const OutputText = ({texto}) => {
                 var dot = "digraph {\n"
                 for (let node in data[0]){
                     const conexiones = data[0][node]
+                    if(node.split(",")[1]==="1"){
+                        dot +="\t" + node.split(",")[0]  + '[shape="doublecircle"];\n'
+                    }
                     for (let NSnumber in conexiones){
-                        dot += "\t" + node + "->" + conexiones[NSnumber][0] +";\n"   
+                        dot += "\t" + node.split(",")[0] + "->" + conexiones[NSnumber][0] + "\t[label =" + conexiones[NSnumber][1]+ "];\n"   ;
                     }
                 }
                 dot += "}"
                 setFunc(data[1])
                 setGrafoOpt(dot)
+                console.log(dot)
               })          
     };
     const getFile = async () => {

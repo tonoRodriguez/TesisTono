@@ -26,13 +26,16 @@ const InputText = ({texto,setTexto}) => {
         var nodo = grafo[key].split("],[");
         var name = nodo[0].split(",")[0];
         name= name.slice(1,name.lenght)
+        if (nodo[0].split(",")[1].replace("]","") === "1"){
+          dot2 = dot2 + "\n\t" + name + '[shape="doublecircle"];';
+        }
         nodo = nodo.slice(1,nodo.length)
+
         for (let i = 0; i < nodo.length; i++) {
           dot2 = dot2 +"\n\t" +name+ "->" + nodo[i].split(",")[0]+ "\t[label =" + nodo[i].split(",")[1].replace("]","")+ "];";
         }
 
       });
-      console.log(dot2)
       setTextIn(dot2+ "\n}")
     };
     reader.readAsText(file);

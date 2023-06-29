@@ -128,20 +128,20 @@ def SpNodes(nodes,a):
     done=[]
     for i in range(len(nodes)):
         estadosSig=[]
-        EstadoActual = ''
+        EstadoActual = ""
         if nodes[i].Actual not in done:
             if nodes[i].Actual in a:
-                EstadoActual = nodes[i].Actual
+                EstadoActual = nodes[i].Actual + "," + nodes[i].Outputs
             else:
-                EstadoActual = buscarHomologo(nodes[i].Actual,a)
+                EstadoActual = buscarHomologo(nodes[i].Actual,a) +"," +nodes[i].Outputs
             for estado in nodes[i].NextState:
                 if estado[0].Actual not in a:
                     estadosSig=estadosSig + [(buscarHomologo(estado[0].Actual,a),estado[1])]
                 else:
                     estadosSig = estadosSig +[(estado[0].Actual ,estado[1]) ]
             res = res + [(EstadoActual,estadosSig)]
-            done = done + list(EstadoActual)
-    return res
+            done = done + list(EstadoActual[0])
+    return res,done
             
             
             

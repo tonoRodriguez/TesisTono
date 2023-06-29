@@ -34,10 +34,11 @@ def insert_data():
     a,b=ts.createNewMachine(q)
     l=ts.SpNodes(q,a)
     sets = {}
-    for i in l:
-      sets[i[0]] =  i[1]
+    for i in range(len(l[0])):
+      sets[l[0][i][0]]=l[0][i][1]
+    # dat={l: str(l)}
+
    # dat={l: str(l)}
-    dat = sets
     dat = [sets,func]
 
     #Aca tengo que aplicar QM- metod
