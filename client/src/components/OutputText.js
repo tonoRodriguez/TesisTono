@@ -30,6 +30,22 @@ const OutputText = ({texto}) => {
                 setGrafoOpt(dot)
               })          
     };
+    const getFile = async () => {
+        try {
+          const response = await fetch('http://localhost:5000/GetData');
+          const fileBlob = await response.blob();
+          const fileUrl = URL.createObjectURL(fileBlob);
+          // Realiza acciones adicionales con la URL del archivo
+          // Por ejemplo, puedes crear un enlace para descargar el archivo:
+          const downloadLink = document.createElement('a');
+          downloadLink.href = fileUrl;
+          downloadLink.download = 'nombre_del_archivo.';
+          downloadLink.click();
+        } catch (error) {
+          console.error(error);
+          // Maneja el error de alguna manera
+        }
+      }
 
     const content = Object.entries(func).map(([key, value]) => (
         <li key={key}>
@@ -43,6 +59,7 @@ const OutputText = ({texto}) => {
                     <button className="button-4"  type="submit">Optimizar</button>
                 </form>
                 <h3>Functions</h3>
+                <button className="button-4" onClick={getFile}>Download SV file</button>
 
             </div>
 
@@ -57,6 +74,7 @@ const OutputText = ({texto}) => {
                 <Graphviz dot={grafoOpt} options={{ width: 200, height: 200 }} />
                 <h3>Functions</h3>
                 <p>{content}</p>
+                <button className="button-4" >Download SV file</button>
             </div>
         )
 

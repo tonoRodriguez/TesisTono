@@ -28,10 +28,11 @@ const InputText = ({texto,setTexto}) => {
         name= name.slice(1,name.lenght)
         nodo = nodo.slice(1,nodo.length)
         for (let i = 0; i < nodo.length; i++) {
-          dot2 = dot2 +"\n\t" +name+ "->" + nodo[i].split(",")[0]+";";
+          dot2 = dot2 +"\n\t" +name+ "->" + nodo[i].split(",")[0]+ "\t[label =" + nodo[i].split(",")[1].replace("]","")+ "];";
         }
 
       });
+      console.log(dot2)
       setTextIn(dot2+ "\n}")
     };
     reader.readAsText(file);

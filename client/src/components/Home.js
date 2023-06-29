@@ -3,7 +3,7 @@ const Home = () => {
     return (
       <div>
         <div className="hero">
-          <h1 className="hero-titleHome">Optimizaor de maquinas de estados finito (fsm)</h1>
+          <h1 className="hero-titleHome">Optimizador de máquinas de estados finito (fsm)</h1>
           <div className="hero-subcontainer">
             <h2 className="hero-subtitleHome">Memoria para optar al titulo de ingeniero civil electrico</h2>
             <h2 className="hero-subtitleHome">Antonio Rodríguez</h2>

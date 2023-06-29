@@ -48,7 +48,7 @@ def insert_data():
     #ts.SeparateGroupesMoore(q)
     #ts.DefineEqualNodesMoore(q)
     #a,b= ts.createNewMachineMoore (q)
-    #l=ts.specifyNodes(q,a)
+    #l=ts.specif1yNodes(q,a)
     #for i in l:
     #  dat[i.Actual]=i.NextState
     #print(dat)
