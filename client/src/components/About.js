@@ -9,8 +9,12 @@ const About = () => {
         </div>
         <div className="subcontainerAbout">
           <h1>Diagrama mnemotecnico documentado y máquina FSM</h1>
-          <h2>Maquina FSM</h2>
-          <h2>Diagrama MDS, escritura</h2>
+          <div className="FSM">
+            <h2>Maquina FSM</h2>
+          </div>
+          <div className="MDS">
+            <h2>Diagrama MDS, escritura</h2>
+          </div>
         </div>
         <div className="subcontaier">
           <h1>Etapas del optimizador</h1>

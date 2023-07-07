@@ -40,10 +40,17 @@
     background-color: #B8E2C6;
     width: 100vw;
     height: 100vh;
+    display: flex;
   }
   .subcontainerAbout h1{
     text-align: left;
   }
+  .MDS,
+.FSM{
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
   .subC{
     display: flex;
     flex-direction: row;

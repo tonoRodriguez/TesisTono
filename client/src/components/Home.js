@@ -15,7 +15,9 @@ const Home = () => {
           <div className="TituloOpt">
             <h1 className="tituloOptTx" >Descubre el algoritmo</h1>
           </div>
-          <button className="OptButton">Optimizaor</button>
+          <div className="divB">
+            <button className="OptButton">Optimizador</button>
+          </div>
         </div>
 
       </div>

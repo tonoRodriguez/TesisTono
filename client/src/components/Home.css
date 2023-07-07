@@ -50,6 +50,14 @@
   }
   .OptButton{
     border-radius: 10%;
-    top: 50%;
-    left: 50%;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    width: 30vw;
+    height: 20vh;
   }
+  .divB{
+    text-align: center;
+  }
+  
