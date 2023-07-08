@@ -5,9 +5,7 @@ const Home = () => {
         <div className="hero">
           <h1 className="hero-titleHome">Optimizador de máquinas de estados finito (fsm)</h1>
           <div className="hero-subcontainer">
-            <h2 className="hero-subtitleHome">Memoria para optar al titulo de ingeniero civil electrico</h2>
-            <h2 className="hero-subtitleHome">Antonio Rodríguez</h2>
-            <h2 className="hero-subtitleHome">Universidad de Chile</h2>
+            <p className="hero-subtitleHome">Memoria para optar al titulo de ingeniero civil electrico <br/> Antonio Rodríguez <br/>  Universidad de Chile</p>
 
           </div>
         </div>

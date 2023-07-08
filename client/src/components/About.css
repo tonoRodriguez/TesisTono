@@ -6,9 +6,9 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
   }
   
   .hero-title {
@@ -16,9 +16,11 @@
     text-align: left;
     letter-spacing: 0px;
     color: #FFFFFF;
-    margin-left: 10%;
+    margin-top: 10%;
+    margin-left: 5%;
     margin-right: 5%;
     width: 80%;
+    font-size: 2.5em;
     height: 10%;
   }
   
@@ -26,6 +28,7 @@
     color: #FFFFFF;
     font-family: Arial, sans-serif;
     font-size: 1.5em;
+    margin-left: 5%;
   }
   .hero-subcontainer{
     margin-top: -10vh;
@@ -40,16 +43,22 @@
     background-color: #B8E2C6;
     width: 100vw;
     height: 100vh;
-    display: flex;
   }
   .subcontainerAbout h1{
-    text-align: left;
+    text-align: center;
+  }
+  .tutorial{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
   }
   .MDS,
 .FSM{
   width: 50%;
   padding: 20px;
   box-sizing: border-box;
+  text-align: center;
+  border: 2px solid black
 }
   .subC{
     display: flex;
