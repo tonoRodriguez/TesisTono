@@ -8,7 +8,9 @@ const About = () => {
           <h2 className="hero-subtitle">Esta herramienta utiliza diagramas estados mnemotecnicos <br/>  documentados (MDS) para especificar maquinas <br/> de estados finitos (FSM). Analiza la máquina, <br/> la optimiza y la compila a system verilog.</h2>
         </div>
         <div className="subcontainerAbout">
-          <h1>Diagrama mnemotecnico documentado y máquina FSM</h1>
+          <div className="subcontainerAbout-title">
+            <h1>Diagrama mnemotecnico documentado y máquina FSM</h1>
+          </div>
           <div className="tutorial">
             <div className="FSM">
               <h2>Maquina FSM</h2>

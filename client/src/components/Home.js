@@ -3,8 +3,10 @@ const Home = () => {
     return (
       <div>
         <div className="hero">
-          <h1 className="hero-titleHome">Optimizador de máquinas de estados finito (fsm)</h1>
-          <div className="hero-subcontainer">
+          <div className="hero-container">
+            <h1 className="hero-titleHome">Optimizador de máquinas de estados finito (fsm)</h1>
+          </div>
+          <div className="home-subcontainer">
             <p className="hero-subtitleHome">Memoria para optar al titulo de ingeniero civil electrico <br/> Antonio Rodríguez <br/>  Universidad de Chile</p>
 
           </div>

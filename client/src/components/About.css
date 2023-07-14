@@ -44,7 +44,14 @@
     width: 100vw;
     height: 100vh;
   }
-  .subcontainerAbout h1{
+  .subcontainerAbout-title{
+    display: flex; /* or grid */
+    height: 20vh;
+    text-align: center;
+    justify-content: center; /* horizontally center the content */
+    align-items: center; /* vertically center the content */
+  }
+  .subcontainerAbout-title h1{
     text-align: center;
   }
   .tutorial{
