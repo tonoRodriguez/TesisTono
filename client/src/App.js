@@ -13,13 +13,13 @@ const App = ()=> {
       <nav>
         <ul>
           <li>
-            <Link to ="/">Home</Link>
+            <Link to ="/">Inicio</Link>
           </li>
           <li>
-            <Link to ="/about">About</Link>
+            <Link to ="/about">Guía de uso</Link>
           </li>
           <li>
-            <Link to ="/fcode">Optimizer</Link>
+            <Link to ="/fcode">Optimizador</Link>
           </li>
         </ul>
       </nav>

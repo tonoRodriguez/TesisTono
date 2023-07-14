@@ -1,22 +1,35 @@
 import "./About.css";
+import diagramaFlujo from './imgs/diagramaFlujo.png';
+import diagramaMDS from './imgs/diagramaMDS.png';
 const About = () => {
 
     return (
       <div>
         <div className="about">
-          <h1 className="hero-title">Software optimizador y compilador de maquinas <br/> de estado finito (FSM)</h1>
-          <h2 className="hero-subtitle">Esta herramienta utiliza diagramas estados mnemotecnicos <br/>  documentados (MDS) para especificar maquinas <br/> de estados finitos (FSM). Analiza la máquina, <br/> la optimiza y la compila a system verilog.</h2>
+          <div className="about-title-div">
+            <h1 className="about-title">Software optimizador y compilador de máquinas de estado finito (FSM)</h1>
+          </div>
+          <div className="about-subtitle-div">
+          <h2 className="about-subtitle">Esta herramienta utiliza diagramas estados mnemotécnicos <br/>  documentados (MDS) para especificar máquinas <br/> de estados finitos (FSM). Analiza la máquina, <br/> la optimiza y la compila a SystemVerilog.</h2>
+          </div>
         </div>
         <div className="subcontainerAbout">
           <div className="subcontainerAbout-title">
-            <h1>Diagrama mnemotecnico documentado y máquina FSM</h1>
+            <h1>Diagrama mnemotécnico documentado y máquina FSM</h1>
           </div>
           <div className="tutorial">
             <div className="FSM">
-              <h2>Maquina FSM</h2>
+              <h2>Diagrama de Flujo</h2>
+              <img src={diagramaFlujo} alt="diagrama de Flujo" />
             </div>
             <div className="MDS">
-              <h2>Diagrama MDS, escritura</h2>
+              <h2>Diagrama MDS</h2>
+              <img src={diagramaMDS} alt="diagrama MDS" />
+            </div>
+            <div className="Def">
+              <h2>Definición de nodos</h2>
+              <p><code>&#123; <br/> "1" : "[A,0],[B,f1],[C,f2],[A,f3]", <br/> "2" : "[B,0],[C,f1],[A,f2],[B,f3]" <br/>&#125;</code></p>
+
             </div>
 
           </div>

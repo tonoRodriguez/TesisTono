@@ -8,6 +8,7 @@ nav {
   justify-content: flex-start; /* Alinea los elementos al comienzo de la barra de navegación */
   align-items: center; /* Centra los elementos verticalmente */
   padding: 0 20px; /* Añade un poco de padding a los lados de la barra de navegación */
+  width: 100vw;
 }
 
 ul {
@@ -18,7 +19,7 @@ ul {
 }
 
 li {
-  margin-right: 20px; /* Añade un margen a la derecha de cada elemento de la lista */
+  margin-right: 35px; /* Añade un margen a la derecha de cada elemento de la lista */
 }
 
 li a {

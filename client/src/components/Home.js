@@ -2,12 +2,12 @@ import "./Home.css";
 const Home = () => {
     return (
       <div>
-        <div className="hero">
-          <div className="hero-container">
-            <h1 className="hero-titleHome">Optimizador de máquinas de estados finito (fsm)</h1>
+        <div className="home">
+          <div className="home-container">
+            <h1 className="home-titleHome">Optimizador de máquinas de estados finito (FSM)</h1>
           </div>
           <div className="home-subcontainer">
-            <p className="hero-subtitleHome">Memoria para optar al titulo de ingeniero civil electrico <br/> Antonio Rodríguez <br/>  Universidad de Chile</p>
+            <p className="home-subtitleHome">Memoria para optar al título de ingeniero civil eléctrico <br/> Antonio Rodríguez <br/>  Universidad de Chile</p>
 
           </div>
         </div>
