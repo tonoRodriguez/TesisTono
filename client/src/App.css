@@ -3,18 +3,20 @@ body{
 }
 nav {
   background-color: #333333; /* El color de fondo de la barra de navegación */
-  height: 60px; /* La altura de la barra de navegación */
+  height: 50px; /* La altura de la barra de navegación */
   display: flex; /* Usamos flexbox para alinear los elementos en la barra de navegación */
   justify-content: flex-start; /* Alinea los elementos al comienzo de la barra de navegación */
   align-items: center; /* Centra los elementos verticalmente */
-  padding: 0 20px; /* Añade un poco de padding a los lados de la barra de navegación */
+  padding: 0 0; /* Añade un poco de padding a los lados de la barra de navegación */
   width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 ul {
   list-style-type: none; /* Elimina los puntos de la lista */
   margin: 0; /* Elimina los márgenes de la lista */
-  padding: 0; /* Elimina el padding de la lista */
+  padding: 30px; /* Elimina el padding de la lista */
   display: flex; /* Usamos flexbox para alinear los elementos de la lista */
 }
 

@@ -82,3 +82,9 @@
   .button-4:-webkit-details-marker {
     display: none;
   }
+  .grafoIn{
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

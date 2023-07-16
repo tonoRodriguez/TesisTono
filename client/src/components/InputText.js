@@ -43,7 +43,7 @@ const InputText = ({texto,setTexto}) => {
 
   if (Object.keys(textIn).length === 0){
     return (
-      <div>
+      <div className='grafoIn'>
         <form>
           <input type="file" onChange={handleFileInput} />
         </form>
@@ -55,10 +55,16 @@ const InputText = ({texto,setTexto}) => {
 
     return (
       <div>
-        <form>
-          <input className='button-4' type="file" onChange={handleFileInput} />
-        </form>
-        <Graphviz dot={textIn} options={{ width: 200, height: 200 }} />
+        <div>
+          <form>
+            <input className='button-4' type="file" onChange={handleFileInput} />
+          </form>
+        </div>
+
+        <div className='grafoIn'>
+          <Graphviz dot={textIn} options={{ width: 200, height: 200 }} />
+        </div>
+
       </div>
     );
   }
