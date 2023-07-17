@@ -19,3 +19,10 @@
   color: #FFFFFF;;
   margin-top: 5vh;
 }
+.optimizedFunctions{
+  display: flex;
+}
+.optimizedFunctions p{
+margin-right: 370px;
+margin-top: -3px;
+}

@@ -21,6 +21,18 @@
     height: 60vh;
     margin-left: 1.5vw;
   }
+  .subscreenLeft h3{
+    margin-left: 10px;
+  }
+  .subscreenLeft p{
+    margin-left: 10px;
+  }
+  .subscreenRight h3{
+    margin-left: 10px;
+  }
+  .subscreenRight p{
+    margin-left: 10px;
+  }
   h1{
     text-align: center;
   }
@@ -28,6 +40,7 @@
   /* CSS */
   .button-4 {
     appearance: none;
+    height: 50px;
     background-color: #FAFBFC;
     border: 1px solid rgba(27, 31, 35, 0.15);
     border-radius: 6px;
@@ -83,8 +96,9 @@
     display: none;
   }
   .grafoIn{
-    height: 210px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
   }

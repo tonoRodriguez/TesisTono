@@ -62,6 +62,9 @@ const OutputText = ({texto}) => {
                 <form onSubmit={sendGraph}>
                     <button className="button-4"  type="submit">Optimizar</button>
                 </form>
+                <div className="grafoIn">
+
+                </div>
                 <h3>Functions</h3>
                 <button className="button-4" onClick={getFile}>Download SV file</button>
 
@@ -75,10 +78,14 @@ const OutputText = ({texto}) => {
                 <form onSubmit={sendGraph}>
                     <button className="button-4"  type="submit">Optimizar</button>
                 </form>
-                <Graphviz dot={grafoOpt} options={{ width: 200, height: 200 }} />
+                <div className="grafoIn">
+                    <Graphviz dot={grafoOpt} options={{ width: 200, height: 200 }} />
+                </div>
                 <h3>Functions</h3>
-                <p>{content}</p>
-                <button className="button-4" >Download SV file</button>
+                <div className="optimizedFunctions">
+                    <p>{content}</p>
+                    <button className="button-4" >Download SV file</button>
+                </div>
             </div>
         )
 

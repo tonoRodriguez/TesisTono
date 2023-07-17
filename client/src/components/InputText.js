@@ -43,10 +43,12 @@ const InputText = ({texto,setTexto}) => {
 
   if (Object.keys(textIn).length === 0){
     return (
-      <div className='grafoIn'>
+      <div>
         <form>
-          <input type="file" onChange={handleFileInput} />
+          <input className='button-4' type="file" onChange={handleFileInput} />
         </form>
+        <div className='grafoIn'>
+        </div>
       </div>
     );
 
