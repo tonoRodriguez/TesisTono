@@ -50,6 +50,7 @@ const EnterNode = ()=> {
       */
     return (
         <div>
+            <h1>Enter node</h1>
             <form onSubmit={onNodeSubmit}>
                 <input                     
                     type="text"
@@ -66,7 +67,6 @@ const EnterNode = ()=> {
                 <button className="button-add" type="submit"> Add Node</button>
             </form>
             <Graphviz dot={dot +"\n}"} options={{ width: 200, height: 200 }} />
-            <p>{dot}</p>
 
             <form onSubmit={onFunctionSubmit}>
                 <input                     

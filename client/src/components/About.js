@@ -34,7 +34,7 @@ const About = () => {
             </div>
             <div className="Def">
               <h2>Definición de nodos</h2>
-              <p><code>&#123; <br/> "1" : "[A,0],[B,f1],[C,f2],[A,f3]", <br/> "2" : "[B,0],[C,f1],[A,f2],[B,f3]" <br/>&#125;</code></p>
+              <p><code>&#123; <br/> "1" : "[A,0],[B,f1],[A,f2]", <br/> "2" : "[B,0]" <br/>&#125;</code></p>
 
             </div>
 
