@@ -4,12 +4,7 @@ import React, { useState } from "react";
 const InputText = ({texto,setTexto}) => {
 
   const [textIn,setTextIn]=useState({});
-  /*
-  const dot = `digraph {
-    A -> B;
-    D -> A;
-  }`;
-  */
+
 
 
   const handleFileInput = (e) => {

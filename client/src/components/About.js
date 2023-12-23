@@ -19,10 +19,11 @@ const About = () => {
           </div>
           <div className="tutorial-text">
             <h2>Instrucciones:</h2>
-              <p>1. Escribir el Diagrama de Flujo como se muestra en el primer cuadrado
-                <br/> 2.  Escribir el Diagrama usando Diagramas mnemotécnicos como se muestra en el segundo cuadrado
-                <br/>3. Utilizar la version escrita del diagramo mnemotécnico como se muestra en el tercer cuadrado</p>
-            </div>
+            <p>1. Escribir el Diagrama de Flujo como se muestra en el primer cuadrado
+              <br/> 2.  Escribir el Diagrama usando Diagramas mnemotécnicos como se muestra en el segundo cuadrado
+              <br/>3. Utilizar la version escrita del diagramo mnemotécnico como se muestra en el tercer cuadrado directamente en el software
+            </p>
+          </div>
           <div className="tutorial">
             <div className="FSM">
               <h2>Diagrama de Flujo</h2>

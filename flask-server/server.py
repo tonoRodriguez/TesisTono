@@ -15,6 +15,12 @@ def index():
 @app.route('/GetData',methods=['GET'])
 def get_data():
   global dat
+  
+  return jsonify(dat)
+
+@app.route('/GetFile',methods=['GET'])
+def get_file():
+  global dat
   return jsonify(dat)
 
 @app.route('/data', methods=['POST'])
@@ -23,10 +29,11 @@ def insert_data():
   global dat 
   if request.method == 'POST':
     data = json.loads(request.get_json())
-    func={}
-    for keys in data[1]:
-      f = qm.QuineMcCluskey(data[1][keys],[]).split(" = ")
-      func[keys]=f[1]
+    if data[1] != None:
+      func={}
+      for keys in data[1]:
+        f = qm.QuineMcCluskey(data[1][keys],[]).split(" = ")
+        func[keys]=f[1]
 
     q=ts.obtainNodos(data[0])
     ts.SeparateGroupes(q)
@@ -36,23 +43,9 @@ def insert_data():
     sets = {}
     for i in range(len(l[0])):
       sets[l[0][i][0]]=l[0][i][1]
-    # dat={l: str(l)}
 
-   # dat={l: str(l)}
     dat = [sets,func]
 
-    #Aca tengo que aplicar QM- metod
-  
-    #
-  # Do something with the data, such as inserting it into a database
-    #q= ts.obtainNodosMoore(newData)
-    #ts.SeparateGroupesMoore(q)
-    #ts.DefineEqualNodesMoore(q)
-    #a,b= ts.createNewMachineMoore (q)
-    #l=ts.specif1yNodes(q,a)
-    #for i in l:
-    #  dat[i.Actual]=i.NextState
-    #print(dat)
     return jsonify({'fo': 'br', 'baz': 123})
   else :
     return "error"
