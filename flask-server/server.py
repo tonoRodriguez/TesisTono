@@ -1,9 +1,11 @@
-from flask import Flask, request
+from flask import Flask, request, send_file
 import FinalData as ts
 import json
 from flask_cors import CORS
 import QMC as qm
 from flask import jsonify
+import io
+import Transformer as Tr
 
 app = Flask(__name__)
 CORS(app)
@@ -21,16 +23,34 @@ def get_data():
 @app.route('/GetFile',methods=['GET'])
 def get_file():
   global dat
-  return jsonify(dat)
+  print(dat)
+      # Asumiendo que dat es una cadena que quieres enviar en un archivo .txt
+  text_content = Tr.CreationFile(dat)
+
+    # Crear un objeto de archivo en memoria
+    # Crear un objeto BytesIO para enviar como archivo
+  bytes_io = io.BytesIO(text_content.encode('utf-8'))
+
+  # Enviar el archivo como respuesta
+  return send_file(
+      bytes_io, 
+      mimetype='text/plain', 
+      as_attachment=True, 
+      download_name='texto.txt'
+  )
 
 @app.route('/data', methods=['POST'])
 
 def insert_data():
   global dat 
   if request.method == 'POST':
-    data = json.loads(request.get_json())
-    if data[1] != None:
-      func={}
+    print(type(request.get_json()))
+    if type(request.get_json()) == str:
+      data = json.loads(request.get_json())
+    else:
+      data = request.get_json()
+    func={}
+    if len(dat) !=1 or dat[1] != None:
       for keys in data[1]:
         f = qm.QuineMcCluskey(data[1][keys],[]).split(" = ")
         func[keys]=f[1]

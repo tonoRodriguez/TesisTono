@@ -6,6 +6,30 @@ const OutputText = ({texto}) => {
     const [grafoOpt,setGrafoOpt] = useState("");
     const [func,setFunc]= useState({"h":1})
     
+    //____________________________Obtener mi archivo System verilog________________________________________
+
+    const handleDownload = () => {
+        fetch('http://localhost:5000/GetFile')
+          .then(response => response.blob())
+          .then(blob => {
+            const txtUrl = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = txtUrl;
+            link.download = 'nombre_del_archivo.txt'; // Cambiado a .txt
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(txtUrl);
+          })
+          .catch(error => {
+            console.error('Error al descargar el archivo:', error);
+          });
+    };
+    
+
+
+    //____________________________Send the graph_____________________________________________________
+
     const sendGraph = (event)=>{
         event.preventDefault();
         const response = fetch('http://localhost:5000/data', {
@@ -84,7 +108,7 @@ const OutputText = ({texto}) => {
                 <h3>Functions</h3>
                 <div className="optimizedFunctions">
                     <p>{content}</p>
-                    <button className="button-4" >Download SV file</button>
+                    <button className="button-4" onClick={handleDownload} >Download SV file</button>
                 </div>
             </div>
         )

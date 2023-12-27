@@ -1,7 +1,7 @@
 import React from 'react';
 import Graphviz from 'graphviz-react';
 
-function Graph(dot,setDot) {
+function Graph(dot) {
 
   //  const ass=["digraph {\n" ,"\tA -> B;\n","\tA -> C\n","\tC -> H\n","}" ];
 

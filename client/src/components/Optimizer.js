@@ -9,7 +9,7 @@ function MainComponent() {
   return (
     <div className='Layout'>
       <div className='BOpt'>
-        <button className='buttonFF' onClick={() => setShowComponent('file')}>Form</button>
+        <button className='buttonFF' onClick={() => setShowComponent('form')}>Form</button>
         <button className='buttonFF' onClick={() => setShowComponent('file')}>File</button>
       </div>
       {showComponent === 'form' && <ManualInput />}
